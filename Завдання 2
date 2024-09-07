@@ -1,0 +1,19 @@
+first = input("Введи перше слово: ")
+second = input("Введи друге слово: ")
+
+set1 = set(first)
+set2 = set(second)
+
+unique_first = set1 - set2
+
+unique_second = set2 - set1
+
+if unique_first:
+    print("Літери, які є тільки в першому слові:", ''.join(unique_first))
+else:
+    print("У першому слові немає унікальних літер.")
+
+if unique_second:
+    print("Літери, які є тільки в другому слові:", ''.join(unique_second))
+else:
+    print("У другому слові немає унікальних літер.")
