@@ -1,0 +1,10 @@
+sentence = (input("Введи речення для перевірки: "))
+
+words = sentence.split()
+
+result = [word for word in words if len(word) > 1 and word[0].lower() == word[-1].lower()]
+
+if result:
+    print("Слова які починаються і закінчуються на одну і ту саму літеру: ", ''.join(result))
+else:
+    print("У реченні немає слів, які починаються і закінчуються на одну і ту ж літеру.")
